@@ -8,7 +8,39 @@
 */
 
 function intersection(arr1, arr2) {
-    // Напишите код здесь
+    let arr3 = [];
+
+    if(arr1.length >= arr2.length)
+    {
+      arr3 =  arr1.filter(function(item) {
+        
+            if(arr2.includes(item)) return item;
+        
+        });
+    } else {
+
+        arr3 =  arr2.filter(function(item) {
+           
+            if(arr1.includes(item)) return item;
+      
+        });
+    }
+
+    let newArr = [];
+
+    arr3.forEach (function (item) {
+
+        if (!newArr.length) {
+            newArr.push(item);
+        }
+
+        if (!newArr.includes(item)) 
+        {
+            newArr.push(item);
+        }
+    });
+
+return newArr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

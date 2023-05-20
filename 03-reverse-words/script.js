@@ -9,7 +9,13 @@
 */
 
 function reverseWords(str) {
-    // Напишите код здесь
+    if(typeof str !== 'string' || (str.trim() === '')) return false;
+
+    let newStr = str.toLowerCase().split(' ');
+
+    newStr.reverse();
+
+    console.log(newStr.join(' '));
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

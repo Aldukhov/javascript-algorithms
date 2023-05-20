@@ -9,7 +9,16 @@
 */
 
 function sumOfTwo(arr, sum) {
-    // Напишите код здесь
+    for(let i = 0;i<arr.length; i++)
+    {
+        for(let e = 0;e<arr.length; e++) {
+              if(e!==i) {
+                if(arr[i]+arr[e] === sum)  return true;
+              }
+        }
+    } 
+
+    return false;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

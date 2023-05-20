@@ -10,7 +10,20 @@
 */
 
 function findVowels(str) {
-    // Напишите код здесь
+    if(typeof str !== 'string' || (str.trim() === '')) return false;
+
+    vowel = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
+    newStr = str.toLowerCase().split('');
+   let count = 0;
+   newStr.forEach(function(item) 
+    {
+        vowel.forEach(function(vow) {
+           if(vow === item) count++;
+
+        })
+    });
+
+    return count;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

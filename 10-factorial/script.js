@@ -8,7 +8,21 @@
 */
 
 function factorial(n) {
-    // Напишите код здесь
+    let fact = 1;
+
+    if(Number.isInteger(n)) {
+
+        if(n === 0 )
+        { 
+            return fact;
+        };
+        for(let i=1;i<=n;i++) {
+        fact*=i;
+        }
+
+    } else return false;
+
+    return fact;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
